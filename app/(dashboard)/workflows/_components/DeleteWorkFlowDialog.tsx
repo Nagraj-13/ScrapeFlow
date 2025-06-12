@@ -34,7 +34,7 @@ function DeleteWorkFlowDialog({open,setOpen, workflowName, workflowId}: Props) {
                     Are you sure ?    
                 </AlertDialogTitle> 
                 <AlertDialogDescription>
-                    If you delete this workflow you won't be able to recover import PropTypes from 'prop-types'
+                    If you delete this workflow you won &apos t be able to recover it
                     <div className='flex flex-col py-4 gap-2'>
                         <p> If you are sure, enter <b>{workflowName}</b></p>
                         <Input 
