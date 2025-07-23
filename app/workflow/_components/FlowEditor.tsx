@@ -9,10 +9,15 @@ import { TaskType } from '@/types/task'
 import { NodeComponent } from './nodes/NodeComponents'
 import { AppNode } from '@/types/appNode'
 import { Egg } from 'lucide-react'
+import DeletableEdge from './edge/deleteEdge'
 
 const nodeTypes = {
     FlowScrapeNode: NodeComponent,
 }
+const edgeTypes = {
+    default: DeletableEdge
+};
+
 const snapGrid : [number, number] =[50,50]
 const fitViewOptions = {padding:1};
 function FlowEditor({workflow}:{workflow:Workflow}) {
@@ -65,6 +70,7 @@ function FlowEditor({workflow}:{workflow:Workflow}) {
             onNodesChange={onNodesChange}
             onEdgesChange={onEdgesChange}
             nodeTypes={nodeTypes}
+            edgeTypes={edgeTypes}
             snapToGrid={true}
             snapGrid={snapGrid}
             fitView={true}
